@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -149,9 +150,35 @@ namespace gestiondecontactoswinforms
             updateListBoxContacts();
         }
 
-
+        private void btnSearchContact_Click(object sender, EventArgs e)
+        {
+            SearchingContact();
+        }
         // Método para buscar un contacto
+        private void SearchingContact()
+        {
+            string theContactIs = SearchContact.Text.ToLower();
+            listBox1.Items.Clear();
+            foreach (Contacto contacto in contactos)
+            {
+                if (contacto.name.ToLower().Contains(theContactIs) ||
+                    contacto.email.ToLower().Contains(theContactIs) ||
+                    contacto.phone.ToLower().Contains(theContactIs))
+                {
+                    listBox1.Items.Add(contacto.email);
+                    updateListBoxContacts();
+                    MessageBox.Show("Busqueda exitosa", "Done",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                }else
+                {
+                    MessageBox.Show("No existe el contacto", "Bad",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                }
+            }
 
+        }
 
     }
 }

@@ -42,6 +42,8 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.SearchContact = new System.Windows.Forms.TextBox();
+            this.btnSearchContact = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,7 +135,7 @@
             this.BtnAdd.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.BtnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAdd.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.BtnAdd.Location = new System.Drawing.Point(565, 269);
+            this.BtnAdd.Location = new System.Drawing.Point(565, 298);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(223, 47);
             this.BtnAdd.TabIndex = 10;
@@ -145,7 +147,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(391, 103);
+            this.label2.Location = new System.Drawing.Point(286, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(171, 37);
             this.label2.TabIndex = 12;
@@ -154,9 +156,9 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(398, 143);
+            this.listBox1.Location = new System.Drawing.Point(293, 124);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(357, 108);
+            this.listBox1.Size = new System.Drawing.Size(264, 316);
             this.listBox1.TabIndex = 14;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -176,7 +178,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(565, 322);
+            this.button1.Location = new System.Drawing.Point(565, 351);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(223, 40);
             this.button1.TabIndex = 16;
@@ -184,11 +186,33 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // SearchContact
+            // 
+            this.SearchContact.Font = new System.Drawing.Font("Segoe UI Variable Small", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchContact.Location = new System.Drawing.Point(576, 124);
+            this.SearchContact.Name = "SearchContact";
+            this.SearchContact.Size = new System.Drawing.Size(172, 33);
+            this.SearchContact.TabIndex = 17;
+            // 
+            // btnSearchContact
+            // 
+            this.btnSearchContact.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnSearchContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchContact.Location = new System.Drawing.Point(576, 164);
+            this.btnSearchContact.Name = "btnSearchContact";
+            this.btnSearchContact.Size = new System.Drawing.Size(172, 40);
+            this.btnSearchContact.TabIndex = 18;
+            this.btnSearchContact.Text = "Buscar contacto";
+            this.btnSearchContact.UseVisualStyleBackColor = false;
+            this.btnSearchContact.Click += new System.EventHandler(this.btnSearchContact_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSearchContact);
+            this.Controls.Add(this.SearchContact);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.listBox1);
@@ -227,6 +251,8 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button BtnDelete;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox SearchContact;
+        private System.Windows.Forms.Button btnSearchContact;
     }
 }
 
