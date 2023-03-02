@@ -111,6 +111,7 @@ namespace gestiondecontactoswinforms
         }
 
         // Método que  selecciona los datos del contacto  a actualizar
+        // y los pone nuevamente en los inputs
         private void contactToUpdate()
         {
             string emailContact = listBox1.SelectedItem.ToString();
@@ -146,6 +147,12 @@ namespace gestiondecontactoswinforms
                 MessageBox.Show("Actualización éxitosa", "Done",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ningún contacto para actualizar", "Bad",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Warning);
             }
             updateListBoxContacts();
         }
